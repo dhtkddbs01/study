@@ -1,4 +1,5 @@
 # Z-score 표준화
+
 ```python
 from sklearn.preprocessing import StandardScaler
 
