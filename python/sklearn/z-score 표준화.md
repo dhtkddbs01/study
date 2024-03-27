@@ -18,7 +18,7 @@ df_scaled = pd.DataFrame(scaled_data, columns=df.columns)
 
 # Time 열과 표준화된 데이터 합치기
 df_scaled.insert(0, 'Time', datetime_column)
-
+ 
 print("Original Data:")
 print(df)
 print("\nStandardized Data:")
