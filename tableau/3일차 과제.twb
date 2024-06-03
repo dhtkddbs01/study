@@ -1,0 +1,945 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0425.1340                               -->
+<workbook original-version='18.1' source-build='2024.1.2 (20241.24.0425.1340)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='측정값 선택' datatype='string' datatype-customized='true' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;당류&quot;'>
+        <calculation class='tableau' formula='&quot;당류&quot;' />
+        <members>
+          <member value='&quot;카페인&quot;' />
+          <member value='&quot;당류&quot;' />
+          <member value='&quot;칼로리&quot;' />
+        </members>
+      </column>
+      <column caption='카페인 함유량 선택' datatype='integer' name='[매개 변수 2]' param-domain-type='range' role='measure' type='quantitative' value='100'>
+        <calculation class='tableau' formula='100' />
+        <range granularity='20' max='200' min='0' />
+      </column>
+      <column caption='X축 선택' datatype='string' name='[매개 변수 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;나트륨&quot;'>
+        <calculation class='tableau' formula='&quot;나트륨&quot;' />
+        <members>
+          <member value='&quot;카페인&quot;' />
+          <member value='&quot;칼로리&quot;' />
+          <member value='&quot;나트륨&quot;' />
+          <member value='&quot;당류&quot;' />
+        </members>
+      </column>
+      <column caption='Y축 선택' datatype='string' name='[매개 변수 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;카페인&quot;'>
+        <calculation class='tableau' formula='&quot;카페인&quot;' />
+        <members>
+          <member value='&quot;카페인&quot;' />
+          <member value='&quot;칼로리&quot;' />
+          <member value='&quot;나트륨&quot;' />
+          <member value='&quot;당류&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Sheet1 (스타벅스 메뉴)' inline='true' name='federated.07q5tbg1bt2qmp15sn6t30n745gi' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='스타벅스 메뉴' name='excel-direct.09c4xtf0fsxrfa1asa12p03en13u'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/oh/AppData/Local/Temp/TableauTemp/0a173fc19xt1cv14h8mo20ffc8pj/Data/Day1/스타벅스 메뉴.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.09c4xtf0fsxrfa1asa12p03en13u' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:H141:no:A1:H141:0' header='yes' outcome='6'>
+            <column datatype='string' name='카테고리' ordinal='0' />
+            <column datatype='string' name='메뉴명' ordinal='1' />
+            <column datatype='integer' name='칼로리(Kcal)' ordinal='2' />
+            <column datatype='integer' name='당류(g)' ordinal='3' />
+            <column datatype='real' name='단백질(g)' ordinal='4' />
+            <column datatype='real' name='나트륨(mg)' ordinal='5' />
+            <column datatype='real' name='포화지방(g)' ordinal='6' />
+            <column datatype='integer' name='카페인(mg)' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.09c4xtf0fsxrfa1asa12p03en13u' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:H141:no:A1:H141:0' header='yes' outcome='6'>
+            <column datatype='string' name='카테고리' ordinal='0' />
+            <column datatype='string' name='메뉴명' ordinal='1' />
+            <column datatype='integer' name='칼로리(Kcal)' ordinal='2' />
+            <column datatype='integer' name='당류(g)' ordinal='3' />
+            <column datatype='real' name='단백질(g)' ordinal='4' />
+            <column datatype='real' name='나트륨(mg)' ordinal='5' />
+            <column datatype='real' name='포화지방(g)' ordinal='6' />
+            <column datatype='integer' name='카페인(mg)' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H141:no:A1:H141:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>카테고리</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[카테고리]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>카테고리</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>메뉴명</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[메뉴명]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>메뉴명</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>칼로리(Kcal)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[칼로리(Kcal)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>칼로리(Kcal)</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>당류(g)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[당류(g)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>당류(g)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>단백질(g)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[단백질(g)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>단백질(g)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>나트륨(mg)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[나트륨(mg)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>나트륨(mg)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>포화지방(g)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[포화지방(g)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>포화지방(g)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>카페인(mg)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[카페인(mg)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>카페인(mg)</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Migrated Data]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='선택한 측정값' datatype='integer' name='[Calculation_857654278116343809]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[매개 변수 1] = &apos;칼로리&apos; THEN [칼로리(Kcal)]&#13;&#10;ELSEIF [Parameters].[매개 변수 1] = &apos;카페인&apos; THEN [카페인(mg)]&#13;&#10;ELSEIF [Parameters].[매개 변수 1] = &apos;당류&apos; THEN [당류(g)]&#13;&#10;END' />
+      </column>
+      <column caption='카페인 &gt; 선택한 카페인' datatype='string' name='[Calculation_857654278125137922]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF AVG([카페인(mg)]) &gt; [Parameters].[매개 변수 2] THEN &apos;선택한 카페인보다 많이 들음&apos;&#13;&#10;ELSE &apos;선택한 카페인보다 적게 들음&apos;&#13;&#10;END' />
+      </column>
+      <column caption='X축 (열)' datatype='real' name='[Calculation_857654278177456132]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[매개 변수 3] = &apos;카페인&apos; THEN [카페인(mg)]&#13;&#10;ELSEIF [Parameters].[매개 변수 3] = &apos;칼로리&apos; THEN [칼로리(Kcal)]&#13;&#10;ELSEIF [Parameters].[매개 변수 3] = &apos;나트륨&apos; THEN [나트륨(mg)]&#13;&#10;ELSEIF [Parameters].[매개 변수 3] = &apos;당류&apos; THEN [당류(g)]&#13;&#10;END' />
+      </column>
+      <column caption='Y축 (행)' datatype='real' name='[Calculation_857654278178353157]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[매개 변수 4] = &apos;카페인&apos; THEN [카페인(mg)]&#13;&#10;ELSEIF [Parameters].[매개 변수 4] = &apos;칼로리&apos; THEN [칼로리(Kcal)]&#13;&#10;ELSEIF [Parameters].[매개 변수 4] = &apos;나트륨&apos; THEN [나트륨(mg)]&#13;&#10;ELSEIF [Parameters].[매개 변수 4] = &apos;당류&apos; THEN [당류(g)]&#13;&#10;END' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='마이그레이션된 데이터' datatype='table' name='[__tableau_internal_object_id__].[Migrated Data]' role='measure' type='quantitative' />
+      <column caption='나트륨(Mg)' datatype='real' name='[나트륨(mg)]' role='measure' type='quantitative' />
+      <column caption='단백질(G)' datatype='real' name='[단백질(g)]' role='measure' type='quantitative' />
+      <column caption='당류(G)' datatype='integer' name='[당류(g)]' role='measure' type='quantitative' />
+      <column datatype='string' name='[카테고리]' role='dimension' type='nominal' />
+      <column caption='카페인(Mg)' datatype='integer' name='[카페인(mg)]' role='measure' type='quantitative' />
+      <column caption='포화지방(G)' datatype='real' name='[포화지방(g)]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_857654278125137922]' derivation='User' name='[usr:Calculation_857654278125137922:nk]' pivot='key' type='nominal' />
+      <group caption='작업(카테고리)' hidden='true' name='[Action (카테고리)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[카테고리]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='0.669078' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.330922' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[usr:Calculation_857654278125137922:nk]' type='palette'>
+            <map to='#bab0ac'>
+              <bucket>&quot;선택한 카페인보다 적게 들음&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;선택한 카페인보다 많이 들음&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;대한민국&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='측정값 선택' datatype='string' datatype-customized='true' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;당류&quot;'>
+          <calculation class='tableau' formula='&quot;당류&quot;' />
+        </column>
+        <column caption='카페인 함유량 선택' datatype='integer' name='[매개 변수 2]' param-domain-type='range' role='measure' type='quantitative' value='100'>
+          <calculation class='tableau' formula='100' />
+          <range granularity='20' max='200' min='0' />
+        </column>
+        <column caption='X축 선택' datatype='string' name='[매개 변수 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;나트륨&quot;'>
+          <calculation class='tableau' formula='&quot;나트륨&quot;' />
+        </column>
+        <column caption='Y축 선택' datatype='string' name='[매개 변수 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;카페인&quot;'>
+          <calculation class='tableau' formula='&quot;카페인&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='마이그레이션된 데이터' id='Migrated Data'>
+            <properties context=''>
+              <relation connection='excel-direct.09c4xtf0fsxrfa1asa12p03en13u' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:H141:no:A1:H141:0' header='yes' outcome='6'>
+                  <column datatype='string' name='카테고리' ordinal='0' />
+                  <column datatype='string' name='메뉴명' ordinal='1' />
+                  <column datatype='integer' name='칼로리(Kcal)' ordinal='2' />
+                  <column datatype='integer' name='당류(g)' ordinal='3' />
+                  <column datatype='real' name='단백질(g)' ordinal='4' />
+                  <column datatype='real' name='나트륨(mg)' ordinal='5' />
+                  <column datatype='real' name='포화지방(g)' ordinal='6' />
+                  <column datatype='integer' name='카페인(mg)' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='하이라이트 1(생성됨)' name='[Action1_70C9F84AD9CB401D873DFD2D40F15BAB]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='시트 1' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='집계(카페인 &gt; 선택한 카페인)' />
+        <param name='target' value='시트 1' />
+      </command>
+    </action>
+    <action caption='하이라이트1' name='[Action2_015A6061DE93498AA2BB1CB7D2E51E57]'>
+      <activation auto-clear='true' type='on-hover' />
+      <source dashboard='대시보드 1' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='카테고리' />
+        <param name='target' value='대시보드 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='시트 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>카테고리 별 &lt;</run>
+            <run>[Parameters].[매개 변수 1]</run>
+            <run>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (스타벅스 메뉴)' name='federated.07q5tbg1bt2qmp15sn6t30n745gi' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='측정값 선택' datatype='string' datatype-customized='true' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;당류&quot;'>
+              <calculation class='tableau' formula='&quot;당류&quot;' />
+            </column>
+            <column caption='카페인 함유량 선택' datatype='integer' name='[매개 변수 2]' param-domain-type='range' role='measure' type='quantitative' value='100'>
+              <calculation class='tableau' formula='100' />
+              <range granularity='20' max='200' min='0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.07q5tbg1bt2qmp15sn6t30n745gi'>
+            <column caption='선택한 측정값' datatype='integer' name='[Calculation_857654278116343809]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[매개 변수 1] = &apos;칼로리&apos; THEN [칼로리(Kcal)]&#13;&#10;ELSEIF [Parameters].[매개 변수 1] = &apos;카페인&apos; THEN [카페인(mg)]&#13;&#10;ELSEIF [Parameters].[매개 변수 1] = &apos;당류&apos; THEN [당류(g)]&#13;&#10;END' />
+            </column>
+            <column caption='카페인 &gt; 선택한 카페인' datatype='string' name='[Calculation_857654278125137922]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF AVG([카페인(mg)]) &gt; [Parameters].[매개 변수 2] THEN &apos;선택한 카페인보다 많이 들음&apos;&#13;&#10;ELSE &apos;선택한 카페인보다 적게 들음&apos;&#13;&#10;END' />
+            </column>
+            <column-instance column='[Calculation_857654278116343809]' derivation='Avg' name='[avg:Calculation_857654278116343809:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[카테고리]' derivation='None' name='[none:카테고리:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_857654278125137922]' derivation='User' name='[usr:Calculation_857654278125137922:nk]' pivot='key' type='nominal' />
+            <column caption='당류(G)' datatype='integer' name='[당류(g)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[카테고리]' role='dimension' type='nominal' />
+            <column caption='카페인(Mg)' datatype='integer' name='[카페인(mg)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[칼로리(Kcal)]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278116343809:qk]' included-values='all' />
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[none:카테고리:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278116343809:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278116343809:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[usr:Calculation_857654278125137922:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.07q5tbg1bt2qmp15sn6t30n745gi].[none:카테고리:nk]</rows>
+        <cols>[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278116343809:qk]</cols>
+      </table>
+      <simple-id uuid='{52674D58-5270-4359-A167-475BA5CED889}' />
+    </worksheet>
+    <worksheet name='시트 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;</run>
+            <run>[Parameters].[매개 변수 3]</run>
+            <run>&gt;과 &lt;</run>
+            <run>[Parameters].[매개 변수 4]</run>
+            <run>&gt;의 관계</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (스타벅스 메뉴)' name='federated.07q5tbg1bt2qmp15sn6t30n745gi' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='X축 선택' datatype='string' name='[매개 변수 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;나트륨&quot;'>
+              <calculation class='tableau' formula='&quot;나트륨&quot;' />
+            </column>
+            <column caption='Y축 선택' datatype='string' name='[매개 변수 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;카페인&quot;'>
+              <calculation class='tableau' formula='&quot;카페인&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.07q5tbg1bt2qmp15sn6t30n745gi'>
+            <column caption='X축 (열)' datatype='real' name='[Calculation_857654278177456132]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[매개 변수 3] = &apos;카페인&apos; THEN [카페인(mg)]&#13;&#10;ELSEIF [Parameters].[매개 변수 3] = &apos;칼로리&apos; THEN [칼로리(Kcal)]&#13;&#10;ELSEIF [Parameters].[매개 변수 3] = &apos;나트륨&apos; THEN [나트륨(mg)]&#13;&#10;ELSEIF [Parameters].[매개 변수 3] = &apos;당류&apos; THEN [당류(g)]&#13;&#10;END' />
+            </column>
+            <column caption='Y축 (행)' datatype='real' name='[Calculation_857654278178353157]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[매개 변수 4] = &apos;카페인&apos; THEN [카페인(mg)]&#13;&#10;ELSEIF [Parameters].[매개 변수 4] = &apos;칼로리&apos; THEN [칼로리(Kcal)]&#13;&#10;ELSEIF [Parameters].[매개 변수 4] = &apos;나트륨&apos; THEN [나트륨(mg)]&#13;&#10;ELSEIF [Parameters].[매개 변수 4] = &apos;당류&apos; THEN [당류(g)]&#13;&#10;END' />
+            </column>
+            <column-instance column='[Calculation_857654278177456132]' derivation='Avg' name='[avg:Calculation_857654278177456132:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_857654278178353157]' derivation='Avg' name='[avg:Calculation_857654278178353157:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[메뉴명]' derivation='None' name='[none:메뉴명:nk]' pivot='key' type='nominal' />
+            <column-instance column='[카테고리]' derivation='None' name='[none:카테고리:nk]' pivot='key' type='nominal' />
+            <column-instance column='[카페인(mg)]' derivation='Sum' name='[sum:카페인(mg):qk]' pivot='key' type='quantitative' />
+            <column caption='나트륨(Mg)' datatype='real' name='[나트륨(mg)]' role='measure' type='quantitative' />
+            <column caption='당류(G)' datatype='integer' name='[당류(g)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[메뉴명]' role='dimension' type='nominal' />
+            <column datatype='string' name='[카테고리]' role='dimension' type='nominal' />
+            <column caption='카페인(Mg)' datatype='integer' name='[카페인(mg)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[칼로리(Kcal)]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278178353157:qk]' included-values='in-range' />
+          <filter class='categorical' column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[none:카테고리:nk]'>
+            <groupfilter function='level-members' level='[none:카테고리:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.07q5tbg1bt2qmp15sn6t30n745gi].[none:카테고리:nk]</column>
+            <column>[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278178353157:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[sum:카페인(mg):qk]' palette='red_black_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[sum:카페인(mg):qk]' />
+              <size column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[sum:카페인(mg):qk]' />
+              <lod column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[none:카테고리:nk]' />
+              <lod column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[none:메뉴명:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278177456132:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278177456132:qk]' z-order='1' />
+            <reference-line axis-column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278178353157:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278178353157:qk]' z-order='2' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='165' />
+                <format attr='size' value='0.62569057941436768' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278178353157:qk]</rows>
+        <cols>[federated.07q5tbg1bt2qmp15sn6t30n745gi].[avg:Calculation_857654278177456132:qk]</cols>
+      </table>
+      <simple-id uuid='{DC33344A-A553-4EA5-85AE-BA3CA5281850}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='대시보드 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='매개 변수' name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='측정값 선택' datatype='string' datatype-customized='true' name='[매개 변수 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;당류&quot;'>
+          <calculation class='tableau' formula='&quot;당류&quot;' />
+          <members>
+            <member value='&quot;카페인&quot;' />
+            <member value='&quot;당류&quot;' />
+            <member value='&quot;칼로리&quot;' />
+          </members>
+        </column>
+        <column caption='카페인 함유량 선택' datatype='integer' name='[매개 변수 2]' param-domain-type='range' role='measure' type='quantitative' value='100'>
+          <calculation class='tableau' formula='100' />
+          <range granularity='20' max='200' min='0' />
+        </column>
+        <column caption='X축 선택' datatype='string' name='[매개 변수 3]' param-domain-type='list' role='measure' type='nominal' value='&quot;나트륨&quot;'>
+          <calculation class='tableau' formula='&quot;나트륨&quot;' />
+          <members>
+            <member value='&quot;카페인&quot;' />
+            <member value='&quot;칼로리&quot;' />
+            <member value='&quot;나트륨&quot;' />
+            <member value='&quot;당류&quot;' />
+          </members>
+        </column>
+        <column caption='Y축 선택' datatype='string' name='[매개 변수 4]' param-domain-type='list' role='measure' type='nominal' value='&quot;카페인&quot;'>
+          <calculation class='tableau' formula='&quot;카페인&quot;' />
+          <members>
+            <member value='&quot;카페인&quot;' />
+            <member value='&quot;칼로리&quot;' />
+            <member value='&quot;나트륨&quot;' />
+            <member value='&quot;당류&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='3' name='시트 1' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='10' name='시트 2' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='6500' id='8' mode='compact' param='[Parameters].[매개 변수 1]' type-v2='paramctrl' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9375' id='9' mode='slider' param='[Parameters].[매개 변수 2]' type-v2='paramctrl' w='16000' x='83200' y='7500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8125' id='11' name='시트 2' pane-specification-id='0' param='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[sum:카페인(mg):qk]' type-v2='color' w='16000' x='83200' y='16875'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18250' id='12' name='시트 2' pane-specification-id='0' param='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[sum:카페인(mg):qk]' type-v2='size' w='16000' x='83200' y='25000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6500' id='13' mode='compact' param='[Parameters].[매개 변수 3]' type-v2='paramctrl' w='16000' x='83200' y='43250'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='6500' id='14' mode='compact' param='[Parameters].[매개 변수 4]' type-v2='paramctrl' w='16000' x='83200' y='49750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='15' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='시트 1' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='8' mode='compact' param='[Parameters].[매개 변수 1]' type-v2='paramctrl' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9375' id='9' mode='slider' param='[Parameters].[매개 변수 2]' type-v2='paramctrl' w='16000' x='83200' y='7500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='13' mode='compact' param='[Parameters].[매개 변수 3]' type-v2='paramctrl' w='16000' x='83200' y='43250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='14' mode='compact' param='[Parameters].[매개 변수 4]' type-v2='paramctrl' w='16000' x='83200' y='49750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='10' is-fixed='true' name='시트 2' w='82400' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8125' id='11' name='시트 2' pane-specification-id='0' param='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[sum:카페인(mg):qk]' type-v2='color' w='16000' x='83200' y='16875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='18250' id='12' name='시트 2' pane-specification-id='0' param='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[sum:카페인(mg):qk]' type-v2='size' w='16000' x='83200' y='25000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{28C50722-D00A-462A-9D2F-84EB92485F2F}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='시트 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+            <card mode='slider' param='[Parameters].[매개 변수 2]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F79F0E31-62A7-4881-8978-C566E88C53C6}' />
+    </window>
+    <window class='worksheet' name='시트 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 3]' type='parameter' />
+            <card mode='compact' param='[Parameters].[매개 변수 4]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[sum:카페인(mg):qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.07q5tbg1bt2qmp15sn6t30n745gi].[sum:카페인(mg):qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BC74592E-B43B-4476-822E-4AAA4B7BABBD}' />
+    </window>
+    <window class='dashboard' maximized='true' name='대시보드 1'>
+      <viewpoints>
+        <viewpoint name='시트 1' />
+        <viewpoint name='시트 2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{2E223A3D-E04C-4AD8-AF4C-7A1A30AFF204}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='대시보드 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
